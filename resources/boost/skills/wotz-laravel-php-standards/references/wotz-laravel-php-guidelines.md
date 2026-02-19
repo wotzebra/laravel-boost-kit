@@ -14,10 +14,10 @@ $refreshTokenExpiryMinutes = 30;
 
 ## 2. Linting
 
-Run linting using the project Makefile when available:
+Run linting using the project lint command:
 
 ```bash
-make lint
+composer lint
 ```
 
 Otherwise:
@@ -58,11 +58,11 @@ public function create(): void
 }
 ```
 
-**Exception:** Every test method requires a `/** @test */` docblock.
+**Exception:** Every test method requires a `#[Test]` attribute. Test methods do not have a return type.
 
 ```php
-/** @test */
-public function it_can_create_sets_uuid(): void
+#[Test]
+public function it_can_create_sets_uuid()
 {
 ```
 
@@ -671,7 +671,7 @@ class ArticleCollection extends Collection
 Always provide a return type:
 
 ```php
-protected function fullname(): Attribute
+protected function fullName(): Attribute
 {
     return Attribute::make(
         get: fn ($value): string => "{$this->firstname} {$this->lastname}",
@@ -693,10 +693,10 @@ Snake case with `it_` prefix:
 
 ```php
 // GOOD:
-public function it_can_update_phone_to_e164_format(): void {}
+public function it_can_update_phone_to_e164_format() {}
 
 // BAD:
-public function testUpdateFormatsPhoneToE164Format(): void {}
+public function testUpdateFormatsPhoneToE164Format() {}
 ```
 
 ### Assertions
