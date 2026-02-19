@@ -1,28 +1,38 @@
 {
     "name": "wotzebra/boost-wotz-guidelines",
-    "description": "Who owns the Zebra's Laravel & PHP coding guidelines for Laravel Boost",
+    "description": "Wotzebra's Laravel & PHP coding guidelines for Laravel Boost",
+    "keywords": [
+        "laravel",
+        "boost",
+        "guidelines",
+        "coding-standards",
+        "wotzebra"
+    ],
+    "homepage": "https://github.com/wotzebra/boost-wotz-guidelines",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Wotzebra\\BoostWotzGuidelines\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Thibaut Degezelle",
-            "email": "thibaut.degezelle1@gmail.com"
+            "email": "thibaut.degezelle1@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.2",
         "illuminate/support": "^10.0|^11.0|^12.0"
     },
+    "autoload": {
+        "psr-4": {
+            "Wotzebra\\BoostWotzGuidelines\\": "src"
+        }
+    },
     "extra": {
         "laravel": {
             "providers": [
-                "Spatie\\BoostWotzGuidelines\\BoostWotzGuidelinesServiceProvider"
+                "Wotzebra\\BoostWotzGuidelines\\BoostWotzGuidelinesServiceProvider"
             ]
         }
     },
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
