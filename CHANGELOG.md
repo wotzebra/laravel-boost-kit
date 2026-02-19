@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-02-19
+
+### Added
+- Added the `wotz-laravel-simplifier` Boost skill at `resources/boost/skills/wotz-laravel-simplifier/SKILL.md`
+- Added guideline routing in `resources/boost/guidelines/core.blade.php` to activate the simplifier skill for cleanup/refinement tasks
+
 ## [0.1.0] - 2026-02-19
 
 ### Added
