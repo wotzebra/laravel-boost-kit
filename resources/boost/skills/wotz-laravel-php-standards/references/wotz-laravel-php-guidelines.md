@@ -155,6 +155,7 @@ enum NotificationType: string
     case CheerReceived = 'cheer_received';
     case Followed = 'followed';
     case FollowRequested = 'follow_requested';
+    case FollowRequestAccepted = 'follow_request_accepted';
 }
 ```
 
@@ -386,6 +387,8 @@ Route::apiResource('message', MessageController::class);
 Route::middleware('api')->get('message', [MessageController::class, 'show']);
 ```
 
+> For API- and web-specific routing conventions, see the `wotz-laravel-php-api` and `wotz-laravel-php-web` skills.
+
 ---
 
 ## 19. HTTP Verbs
@@ -406,6 +409,8 @@ class OrganizationController {}
 // BAD:
 class OrganizationsController {}
 ```
+
+> For API-specific controller conventions (nested naming, CRUD-only methods), see the `wotz-laravel-php-api` skill.
 
 ---
 
@@ -523,6 +528,8 @@ Use policies. Policy ability names should be descriptive (e.g. `viewAny`, `view`
 ## 26. Translations
 
 Always use `__()`.
+
+> For API- and web-specific translation conventions, see the `wotz-laravel-php-api` and `wotz-laravel-php-web` skills.
 
 ---
 
@@ -699,6 +706,74 @@ Use `assertSame` (strict) over `assertEquals`:
 ```php
 $this->assertSame($expected, $actual);
 ```
+
+### Test Classes
+
+Every test class should be suffixed with `Test`. Below are the conventions per type:
+
+#### Model Tests
+
+- **Folder:** `Models`
+- **Filename:** `{ModelName}Test` (e.g. `UserTest`, `OrganizationTest`)
+- **Contains:** special relations, observer code, accessors/mutators, custom model methods
+- **Notes:** group related tests for scannability; most will be low-level unit tests
+
+#### Policy Tests
+
+- **Folder:** `Policies`
+- **Filename:** `{CrudVerb}{PolicyName}Test` (e.g. `CreateUserPolicyTest`, `ViewOrganizationPolicyTest`)
+- **Contains:** every possible allow and deny scenario for the policy method
+- **Notes:** group allow tests and deny tests separately; use the gate assertion helper from `laravel-test-helpers`
+
+#### Action Tests
+
+- **Folder:** `Actions`
+- **Filename:** `{ActionName}ActionTest` (e.g. `CreateUserActionTest`)
+- **Notes:** useful when testing the action in isolation is easier than testing it through a route
+
+#### Query Tests
+
+- **Folder:** `Queries/{BuilderName}/`
+- **Filename:** `{DescriptionOfBuilderMethod}QueryTest` (e.g. `OrderRecipesByDietsOfUserQueryTest`)
+- **Notes:** test all possibilities of the builder method once here, so route tests only need a basic coverage check
+
+#### Service Tests
+
+- **Folder:** `Services/{ServiceName}/`
+- **Filename:** `{ServiceName}ServiceTest` (e.g. `StravaServiceTest`)
+- **Notes:** use multiple test classes if the service is complex
+
+#### Middleware Tests
+
+- **Folder:** `Http/Middleware`
+- **Filename:** `{MiddlewareName}MiddlewareTest`
+
+#### Job Tests
+
+- **Folder:** `Jobs`
+- **Filename:** `{JobName}Test` (e.g. `SendRemindersJobTest`)
+
+#### Listener Tests
+
+- **Folder:** `Listeners`
+- **Filename:** `{ListenerName}Test` (e.g. `DeleteInvalidFirebaseTokensListenerTest`)
+
+#### Notification Tests
+
+- **Folder:** `Notifications`
+- **Filename:** `{NotificationName}Test` (e.g. `FollowRequestCreatedNotificationTest`)
+
+#### Command Tests
+
+- **Folder:** `Commands`
+- **Filename:** `{CommandName}Test` (e.g. `CleanupTemporaryStorageCommandTest`)
+
+#### Validation Rule Tests
+
+- **Folder:** `Validation`
+- **Filename:** `{RuleName}RuleTest` (e.g. `LatitudeRuleTest`)
+
+> For route test conventions (folder structure, naming, authorization tests), see the `wotz-laravel-php-api` skill.
 
 ---
 
