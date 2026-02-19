@@ -30,6 +30,16 @@ This package provides AI-optimized versions of Laravel & PHP coding standards, i
 - Naming conventions (camelCase, kebab-case, snake_case)
 - Blade templates and validation
 - Testing best practices
+- A post-generation simplifier skill for cleanup/refinement
+
+## Included Resources
+
+- Core guideline: `resources/boost/guidelines/core.blade.php`
+- Skills:
+  - `resources/boost/skills/wotz-laravel-php-standards/SKILL.md`
+  - `resources/boost/skills/wotz-laravel-php-api/SKILL.md`
+  - `resources/boost/skills/wotz-laravel-php-web/SKILL.md`
+  - `resources/boost/skills/wotz-laravel-simplifier/SKILL.md`
 
 ## Usage
 
