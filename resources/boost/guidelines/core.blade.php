@@ -2,7 +2,7 @@
 
 ## Code linting
 
-- Run {{ $assist->composerCommand('lint') }} to lint all code in the project. `PHP-CS-Fixer` and `PHP_CodeSniffer` are used to lint PHP code. `Prettier` is used to lint Blade / Javascript / CSS code.
+- Run `{{ $assist->composerCommand('lint') }}` to lint all code in the project. `PHP-CS-Fixer` and `PHP_CodeSniffer` are used to lint PHP code. `Prettier` is used to lint Blade / Javascript / CSS code.
 
 ## PHP
 
@@ -94,7 +94,7 @@ if ($conditionA &&
 
 ### Controllers
 
-- Controller names should be singular and should try to closely match the route (e.g. `ChatMessageController` for `/chat/{chat}/messages` route).
+- Controller names should be singular, even if the route is plural, and should try to closely match the route (e.g. `ChatMessageController` for `/chat/{chat}/messages` route).
 - Controller methods should be named after the HTTP verb they handle or based on what they return:
     - `index` for listing resources (e.g. `GET /books`)
     - `view` for showing a single resource (e.g. `GET /book/{book}`)
@@ -177,6 +177,7 @@ if ($conditionA &&
 - Test method name should be descriptive, use snake_case, and start with `it_`.
 - Use fluent response assertions when testing API endpoints (e.g. `$this->getJson('/api/users')->assertStatus(200)->assertJson(...)`). Only define a variable for the response when you really need to.
 - When a model needs to be asserted against in a test, always retrieve a fresh instance of the model from the database instead of using the instance that was created during the test setup. Also name that variable `$dbModel` to make it clear that it is a fresh instance from the database and so you can easily compare it with the `$model` instance that was created during the test setup.
+- When testing sorting, make sure the data is created in a way that the test will not be accidentally passing due to the default order of the data.
 
 ```php
 #[Test]
