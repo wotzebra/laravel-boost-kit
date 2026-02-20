@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-02-20
+
+### Changed
+- Renamed package to `wotz/laravel-boost-kit`
+- Updated PHP namespace from `Wotzebra\BoostWotzGuidelines` to `Wotz\LaravelBoostKit`
+- Renamed service provider to `LaravelBoostKitServiceProvider`
+
 ## [0.1.1] - 2026-02-19
 
 ### Added

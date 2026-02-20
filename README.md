@@ -7,7 +7,7 @@ Bring Wotzebra's Laravel & PHP coding guidelines to your AI-assisted development
 Install the package via Composer:
 
 ```bash
-composer require wotzebra/boost-wotz-guidelines --dev
+composer require wotz/laravel-boost-kit --dev
 ```
 
 Then install the guidelines with Boost:
@@ -50,7 +50,7 @@ Once installed, AI assistants using Laravel Boost will automatically reference t
 Re-run the Boost installer after updating the package to refresh guidelines:
 
 ```bash
-composer update wotzebra/boost-wotz-guidelines
+composer update wotz/laravel-boost-kit
 php artisan boost:update
 ```
 

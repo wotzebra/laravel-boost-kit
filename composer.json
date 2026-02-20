@@ -23,13 +23,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Wotzebra\\BoostWotzGuidelines\\": "src"
+            "Wotz\\LaravelBoostKit\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Wotzebra\\BoostWotzGuidelines\\BoostWotzGuidelinesServiceProvider"
+                "Wotz\\LaravelBoostKit\\LaravelBoostKitServiceProvider"
             ]
         }
     },

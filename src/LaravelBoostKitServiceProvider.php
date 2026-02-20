@@ -1,10 +1,10 @@
 <?php
 
-namespace Wotzebra\BoostWotzGuidelines;
+namespace Wotz\LaravelBoostKit;
 
 use Illuminate\Support\ServiceProvider;
 
-class BoostWotzGuidelinesServiceProvider extends ServiceProvider
+class LaravelBoostKitServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
