@@ -31,6 +31,7 @@ This package provides AI-optimized versions of Laravel & PHP coding standards, i
 - Blade templates and validation
 - Testing best practices
 - A post-generation simplifier skill for cleanup/refinement
+- A skill to set up the Userback widget for your Laravel app (optional will also include it in Filament) 
 
 ## Included Resources
 
@@ -40,6 +41,7 @@ This package provides AI-optimized versions of Laravel & PHP coding standards, i
   - `resources/boost/skills/wotz-laravel-php-api/SKILL.md`
   - `resources/boost/skills/wotz-laravel-php-web/SKILL.md`
   - `resources/boost/skills/wotz-laravel-simplifier/SKILL.md`
+  - `resources/boost/skills/wotz-laravel-userback/SKILL.md`
 
 ## Usage
 
