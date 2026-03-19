@@ -30,6 +30,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated PHP namespace from `Wotzebra\BoostWotzGuidelines` to `Wotz\LaravelBoostKit`
 - Renamed service provider to `LaravelBoostKitServiceProvider`
 
+### Changed
+- Updated PHP constraint from `^8.2` to `^8.4` for PHP 8.4 and 8.5 support
+- Updated `illuminate/support` constraint from `^10.0|^11.0|^12.0` to `^12.0|^13.0` for Laravel 13 support
+- Added GitHub Actions CI workflow with PHP 8.4/8.5 and Laravel 12/13 matrix
+
 ## [0.2.0] - 2026-02-20
 
 ### Changed
