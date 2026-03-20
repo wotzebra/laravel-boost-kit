@@ -167,6 +167,7 @@ if ($conditionA &&
 
 - Do not separate unit from feature tests. Group by domain/concern.
 
+@if (!isset(app(\Laravel\Boost\Support\Composer::class)->packages()['pestphp/php']))
 ### PHPUnit
 
 - Avoid `$this->assertEquals()`; Prefer `$this->assertSame()`.
@@ -192,6 +193,7 @@ public function it_can_assert_that_user_can_update_its_name()
     $this->assertSame('Taylor Otwell', $dbUser->name);
 }
 ```
+@endif
 
 # API Development
 
