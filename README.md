@@ -1,6 +1,6 @@
-# Wotzebra Guidelines for Laravel Boost
+# Extra Guidelines and Skills for Laravel Boost
 
-Bring Wotzebra's Laravel & PHP coding guidelines to your AI-assisted development workflow with Laravel Boost.
+This package adds Laravel & PHP coding guidelines and skills used by Who Owns The Zebra to your AI-assisted development workflow with Laravel Boost.
 
 ## Installation
 
@@ -16,43 +16,11 @@ Then install the guidelines with Boost:
 php artisan boost:install
 ```
 
-Select the Wotzebra guidelines from the list and they'll be installed to `.ai/guidelines/boost-wotz-guidelines/`.
+Select the guidelines and skills from the list and they'll be installed.
 
-## What's Included
-
-This package provides AI-optimized versions of Laravel & PHP coding standards, including:
-
-- PSR compliance (PSR-1, PSR-2, PSR-12)
-- Type declarations and nullable syntax
-- Class structure and property promotion
-- Control flow patterns (happy path, early returns)
-- Laravel conventions (routes, controllers, configuration)
-- Naming conventions (camelCase, kebab-case, snake_case)
-- Blade templates and validation
-- Testing best practices
-- A post-generation simplifier skill for cleanup/refinement
-- A skill to set up the Userback widget for your Laravel app (optional will also include it in Filament) 
-
-## Included Resources
-
-- Core guideline: `resources/boost/guidelines/core.blade.php`
-- Skills:
-  - `resources/boost/skills/wotz-laravel-php-standards/SKILL.md`
-  - `resources/boost/skills/wotz-laravel-php-api/SKILL.md`
-  - `resources/boost/skills/wotz-laravel-php-web/SKILL.md`
-  - `resources/boost/skills/wotz-laravel-simplifier/SKILL.md`
-  - `resources/boost/skills/wotz-laravel-userback/SKILL.md`
-
-## Usage
-
-Once installed, AI assistants using Laravel Boost will automatically reference these guidelines when generating code.
-
-## Keeping Guidelines Up to Date
-
-Re-run the Boost installer after updating the package to refresh guidelines:
+To keep the installed guidelines and skills up to date, add the following command to "post-update-cmd" composer script:
 
 ```bash
-composer update wotz/laravel-boost-kit
 php artisan boost:update
 ```
 
