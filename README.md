@@ -1,5 +1,8 @@
 # Extra Guidelines and Skills for Laravel Boost
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/wotz/laravel-boost-kit.svg?style=flat-square)](https://packagist.org/packages/wotz/laravel-boost-kit)
+[![Total Downloads](https://img.shields.io/packagist/dt/wotz/laravel-boost-kit.svg?style=flat-square)](https://packagist.org/packages/wotz/laravel-boost-kit)
+
 This package adds Laravel & PHP coding guidelines and skills used by Who Owns The Zebra to your AI-assisted development workflow with Laravel Boost.
 
 ## Installation
